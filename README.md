@@ -1,4 +1,4 @@
-# React Using Callbacks to Pass Information Code-Along
+ # React Using Callbacks to Pass Information Code-Along
 
 ## Objectives
 
@@ -134,14 +134,14 @@ background color of the returned `div`:
 import React, { Component } from 'react';
 
 export default class Cell extends Component {
-  
+
   constructor(props) {
     super(props)
     this.state = {
       color: this.props.color
     }
   }
-  
+
   render() {
     return (
       <div className="cell"
@@ -150,7 +150,7 @@ export default class Cell extends Component {
       </div>
     )
   }
-  
+
 }
 ```
 
@@ -390,14 +390,14 @@ method like we've seen before:
 import React, { Component } from 'react';
 
 export default class Cell extends Component {
-  
+
   constructor(props) {
     super(props)
     this.state = {
       color: this.props.color
     }
   }
-  
+
   handleClick = () => {
     this.setState({
       color: this.props.selectedColor
@@ -412,7 +412,7 @@ export default class Cell extends Component {
       </div>
     )
   }
-  
+
 }
 ```
 
@@ -436,4 +436,3 @@ One way of thinking about this is that _information_ is passed **down** from
 parent to child. Sometimes, that information can contain the instructions, in
 the form of callbacks, for sending _actions_ **up**. This pattern is useful to
 keep in mind as we build out more complex component trees.
-
